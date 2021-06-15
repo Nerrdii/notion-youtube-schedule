@@ -4,7 +4,7 @@ let loading = false;
 
 const getVideosFromBackend = async () => {
   loading = true;
-  const res = await fetch('http://localhost:5000/videos');
+  const res = await fetch(`${window.location.href}videos`);
   const data = await res.json();
   loading = false;
   return data;
